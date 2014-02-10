@@ -16,7 +16,10 @@
 
   var getNoteStore = function (req) {
     if (config.OAUTH_ACCESS_TOKEN) {
-      var client = new Evernote.Client({ token: config.OAUTH_ACCESS_TOKEN, sandbox: config.SANDBOX });
+      var client = new Evernote.Client({
+        token: config.OAUTH_ACCESS_TOKEN,
+        sandbox: config.SANDBOX
+      });
       return client.getNoteStore();
     } else {
       return null;
@@ -25,7 +28,8 @@
 
   /*
    *  getFuzzyNotebookGuid (noteStore, req, cb)
-   *    gets the FuzzyPlates Subscribers notebook GUID. If it doesn't exist, calls to create it
+   *    gets the FuzzyPlates Subscribers notebook GUID. If it doesn't exist,
+   *      calls to create it
    *    returns notebook GUID
    */
 
@@ -61,7 +65,8 @@
 
   /*
    *  getNoteGuid (noteStore, req, cb)
-   *    gets the right Subscribers note GUID. If it doesn't exist, calls to create the note
+   *    gets the right Subscribers note GUID. If it doesn't exist, calls to
+   *      create the note
    *    returns note GUID
    */
 
