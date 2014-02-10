@@ -11,4 +11,6 @@ Documentation is lacking right now, but basically you'll need to:
 1. get an Evernote API key
 2. get your OAuth access token (run locally, hit endpoint /oauth)
 3. Configure config.json and config.yml accordingly (see .template for notes!)
+4. Tweak the template to your liking
+5. When you're satisfied, you need to request Evernote to activate your API key for production
 4. Deploy!
