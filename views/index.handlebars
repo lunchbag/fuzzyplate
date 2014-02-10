@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>{{document_title}}</title>
+<link rel="stylesheet" href="toast.css">
+<style type="text/css">
+  {{css}}
+</style>
+</head>
+
+<body>
+
+<header>
+  <span id="title">{{product_name}}</span>
+  <nav>
+    {{#each nav}}
+    <span class="link" data-section-id="{{nav_link_id}}">{{title}}</span>
+    {{/each}}
+  </nav>
+  <div style="clear:both;"></div>
+</header>
+
+<div id="body">
+  <span id="tagline">{{main_tagline}}</span>
+  <span id="tagline-meta">{{sub_tagline}}</span>
+  <center><span id="body-button" class="link button">{{button_text}}</span></center>
+</div>
+
+{{#each sections}}
+  {{#if text-only}}
+    <div class="section" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
+      <span class="section-title">{{#if title}}{{title}}{{else}}About{{/if}}</span>
+      <span class="section-text">{{text}}</span>
+    </div>
+  {{/if}}
+
+  {{#if n-columns}}
+    <div class="section n-columns" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
+      <span class="section-title">{{#if title}}{{title}}{{else}}n-Column Title{{/if}}</span>
+      {{#each columns}}
+      <span class="n-col">{{#if image}}{{#if image_link}}<a href="{{image_link}}">{{/if}}<img class="{{#if resize}}resize{{/if}}" src="{{image}}" />{{#if image_link}}</a>{{/if}}{{/if}}
+        <span class="col-title">{{#if title}}{{title}}{{/if}}</span>
+        <span class="col-text">{{#if text}}{{text}}{{/if}}</span>
+      </span>
+      {{/each}}
+    </div>
+  {{/if}}
+
+  {{#if 3-columns}}
+    <div class="section container col" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
+      <span class="section-title">{{#if title}}{{title}}{{else}}3-Column Title{{/if}}</span>
+      <div class="grid">
+        {{#each columns}}
+        <div class="unit one-of-three">
+          <span class="col-title">{{#if title}}{{title}}{{/if}}</span>
+          {{#if image}}<img src="{{image}}" />{{/if}}
+          {{#if quote}}<span class="col-text quote">{{quote}}</span>{{/if}}
+          {{#if text}}<span class="col-text">{{text}}</span>{{/if}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+
+  {{#if 2-columns}}
+    <div class="section container col" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
+      <span class="section-title">{{#if title}}{{title}}{{else}}3-Column Title{{/if}}</span>
+      <div class="grid">
+        {{#each columns}}
+        <div class="unit one-of-two">
+          <span class="col-title">{{#if title}}{{title}}{{/if}}</span>
+          {{#if image}}<img src="{{image}}" />{{/if}}
+          {{#if quote}}<span class="col-text quote">{{quote}}</span>{{/if}}
+          {{#if text}}<span class="col-text">{{text}}</span>{{/if}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  {{/if}}
+
+  {{#if subscribe}}
+    <div class="section subscribe" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
+      <span class="section-title">{{#if title}}{{title}}{{else}}Subscribe today!{{/if}}</span>
+      <form name="subscribe">
+        <input type="text" name="email" placeholder="you@gmail.com" />
+        <button name="subscribe" type="submit">Submit</button>
+      </form>
+      <span class="message"></span>
+    </div>
+  {{/if}}
+{{/each}}
+
+<footer>
+  <span>{{footer_text}}</span>
+  <span class="social-media">{{#if twitter}}Follow us! <a href="http://twitter.com/{{twitter}}"><img src="twitter_white.png"></a>{{/if}}</span>
+</footer>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+
+$("form[name=subscribe]").submit(function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $.ajax({
+    url: "/subscribe?email=" + $("input[name=email]").val(),
+    type: 'POST',
+    success: function (msg){
+      $("div.subscribe span.message").html(msg);
+    },
+    error: function (err){
+      $("div.subscribe span.message").html("Something went wrong! Please let us know via Twitter.");
+      console.log(err)
+    }
+  });
+})
+
+/* Parallax */
+$(window).scroll(function () {
+  $("div#body").css("background-position", "0 -" + $("body").scrollTop() * 0.8)
+})
+
+/* Jump to the first section */
+$("#body-button").click(function () {
+  var scrollTo = $("div.section:first").position().top - 60
+    , speed = 1.5;
+
+  var intervalId = window.setInterval(function () {
+    if ($("body").scrollTop() < scrollTo) {
+      window.scrollBy(0,1 * speed);
+      speed = speed * 1.07;
+    } else {
+      window.clearInterval(intervalId);
+    }
+  }, 1)
+})
+
+/* Nav jumping */
+$("nav span").click(function () {
+  var scrollTo = $("div[data-section-id=" + $(this).data('section-id') + "]").position().top - 60
+    , speed = 1.5
+    , lastPosition = 0;
+
+  if ($("body").scrollTop() < scrollTo) {
+    var intervalId = window.setInterval(function () {
+      if ($("body").scrollTop() < scrollTo) {
+        lastPosition = $("body").scrollTop();
+        window.scrollBy(0,1 * speed);
+        if (lastPosition == $("body").scrollTop()) window.clearInterval(intervalId);
+        speed = speed * 1.07;
+      } else {
+        window.clearInterval(intervalId);
+      }
+    }, 1)
+  } else {
+    var intervalId = window.setInterval(function () {
+      if ($("body").scrollTop() > scrollTo) {
+        lastPosition = $("body").scrollTop();
+        window.scrollBy(0, -1 * speed);
+        if (lastPosition == $("body").scrollTop()) window.clearInterval(intervalId);
+        speed = speed * 1.07;
+      } else {
+        window.clearInterval(intervalId);
+      }
+    }, 1)
+  }
+})
+
+</script>
+
+</body>
+</html>

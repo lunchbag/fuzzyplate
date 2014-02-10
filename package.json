@@ -1,0 +1,18 @@
+{
+  "name": "fuzzy-launch",
+  "description": "One Page Template",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.4.7",
+    "mongoose": "*",
+    "mongodb": "*",
+    "handlebars": "*",
+    "express3-handlebars": "*",
+    "yamljs": "*",
+    "node-sass": "*",
+    "evernote": "*",
+    "underscore": "*",
+    "xml2js": "*"
+  }
+}

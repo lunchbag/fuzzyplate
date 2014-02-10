@@ -1,0 +1,116 @@
+# some stuff
+document_title:
+
+# css stuff
+css:
+  # Top header
+  headerColor: '#ffffff'
+  # Footer
+  footerColor: '#333'
+  # Main body image
+  backgroundUrl:
+  # Sections
+  sectionBackgroundColorOdd: '#fff'
+  sectionBackgroundColorEven: '#f3f3f3'
+
+# top-level stuff
+product_name:
+main_tagline:
+sub_tagline:
+button_text: Learn more!
+
+# footer stuff
+footer_text: (c) Derpy Product, All Rights Reserved.
+twitter:
+
+sections:
+  -
+    text-only: true
+    title:
+    text:
+    nav_link: # true, or remove if false
+    nav_link_id: # some [a-z]+ id
+
+  -
+    n-columns: true
+    title:
+    nav_link: # true, or remove if false
+    nav_link_id: # some [a-z]+ id
+    columns:
+      -
+        title:
+        image: # optional
+        resize: # for the image
+        text: # optional
+
+      -
+        title:
+        image: # optional
+        resize: # for the image
+        text: # optional
+
+      -
+        title:
+        image: # optional
+        resize: # for the image
+        text: # optional
+
+  -
+    3-columns: true
+    title:
+    columns:
+      -
+        title:
+        quote:
+        text: # only one of quote/text allowed
+
+      -
+        title:
+        quote:
+        text: # only one of quote/text allowed
+
+      -
+        title:
+        quote:
+        text: # only one of quote/text allowed
+
+  -
+    2-columns: true
+    title:
+    columns:
+      -
+        image:
+
+      -
+        title:
+        quote:
+
+  -
+    n-columns: true
+    title:
+    columns:
+      -
+        image: # optional
+        image_link: # optional
+        resize: false
+
+      -
+        image: # optional
+        image_link: # optional
+        resize: false
+
+      -
+        image: # optional
+        image_link: # optional
+        resize: false
+
+      -
+        image: # optional
+        image_link: # optional
+        resize: false
+
+  -
+    subscribe: true
+    title: Sign up!
+    nav_link: # true, or remove if false
+    nav_link_id: # some [a-z]+ id

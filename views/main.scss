@@ -1,0 +1,197 @@
+@import url(http://fonts.googleapis.com/css?family=Carrois+Gothic);
+@import url(http://fonts.googleapis.com/css?family=Chivo:900);
+@import url(http://fonts.googleapis.com/css?family=Sanchez);
+@import "vars.scss";
+
+body {
+  margin: 0;
+  font-family: Carrois Gothic;
+}
+
+/* TOP HEADER */
+header {
+  z-index: 1;
+  position: fixed;
+  background-color: #{$headerColor};
+  width: 100%;
+  margin: 0;
+  span#title {
+    padding: 10px 0 10px 200px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    float: left;
+    display: block;
+  }
+  nav {
+    padding-right: 200px;
+    display: block;
+    float: right;
+    span {
+      padding: 14px;
+      display: inline-block;
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: #{$footerColor};
+  padding: 10px 200px;
+  span {
+    font-size: 12px;
+    display: inline-block;
+    color: #eee;
+  }
+  span.social-media {
+    position: relative;
+    top: -2px;
+    float: right;
+  }
+  img {
+    width: 20px;
+    height: auto;
+    position: relative;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+/* MAIN BODY IMAGE */
+div#body {
+  margin: 0;
+  padding: 180px 200px 130px;
+  background-image: url(#{$backgroundUrl});
+  background-size: 100% auto;
+  background-attachment:fixed;
+  span#tagline {
+    display: block;
+    font-size: 54px;
+    line-height: 54px;
+    font-family: Chivo;
+    font-weight: 900;
+    font-weight: bold;
+    text-align: center;
+  }
+  span#tagline-meta {
+    display: block;
+    font-size: 26px;
+    margin: 5px;
+    text-align: center;
+  }
+  span.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0 0 0;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fff;
+  }
+}
+
+div.section {
+  text-align: center;
+  margin: 0;
+  padding: 50px 200px;
+  span.section-title {
+    font-size: 26px;
+    display: block;
+    font-weight: 900;
+    margin-bottom: 40px;
+  }
+  /* TEXT-ONLY */
+  span.section-text {
+    display: block;
+  }
+}
+
+/* 2/3-COLUMNS */
+div.col {
+  span.col-title {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+  }
+  /* normal text */
+  span.col-text.quote {
+    font-size: 16px;
+    color: #333;
+  }
+  /* quote */
+  span.col-text.quote {
+    font-size: 16px;
+    font-style: italic;
+    color: #333;
+    font-family: Sanchez;
+  }
+}
+
+/* ALTERNATING SECTION COLOURS */
+div.section:nth-child(even) {
+  border-top: 1px solid #ccc;
+  background-color: #{$sectionBackgroundColorEven};
+}
+
+div.section:nth-child(odd) {
+  border-top: 1px solid #eee;
+  background-color: #{$sectionBackgroundColorOdd};
+}
+
+/* N-COLUMNS */
+div.n-columns {
+  span.n-col {
+    display: inline-block;
+    margin: 10px 20px;
+    img.resize {
+      width: 150px;
+      height: auto;
+      margin: 0;
+      border-radius: 75px;
+    }
+    span {
+      display: block;
+    }
+    span.col-title {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    span.col-text {
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+}
+
+div.subscribe {
+  span.message {
+    font-size: 16px;
+    display: block;
+    margin-top: 20px;
+  }
+  input[type=text], button[type=submit] {
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-top: 0px;
+    font-family: Arial;
+    font-size: 16px;
+    font-family: Carrois Gothic;
+  }
+  input[type=text] {
+    width: 400px;
+  }
+  button[type=submit] {
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+}
+
+.link:hover {
+  cursor: pointer;
+}

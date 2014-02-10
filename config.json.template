@@ -1,0 +1,7 @@
+{
+  "PROJECT_NAME": "", // The name of your project
+  "API_CONSUMER_KEY" : "", // Your Evernote API Consumer key
+  "API_CONSUMER_SECRET" : "", // Your Evernote API Consumer Secret key
+  "SANDBOX" : true, // true, unless production
+  "OAUTH_ACCESS_TOKEN": "" // Your Evernote OAuth Access Token (see README for details)
+}
