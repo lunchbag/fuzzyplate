@@ -35,7 +35,7 @@
           {{#each columns}}
           <span class="n-col">{{#if image}}{{#if image_link}}<a href="{{image_link}}">{{/if}}<img class="{{#if resize}}resize{{/if}} {{#if rounded_corner}}rounded-corner{{/if}}" src="{{image}}" />{{#if image_link}}</a>{{/if}}{{/if}}
             {{#if title}}<span class="col-title">{{title}}</span>{{/if}}
-            {{#if text}}<span class="col-text">{{text}}</span>{{/if}}
+            {{#if text}}<span class="col-text" style="{{#if text_align}}text-align:{{text_align}}{{/if}}">{{text}}</span>{{/if}}
             {{#if quote}}<span class="col-text quote">{{quote}}</span>{{/if}}
           </span>
           {{/each}}
