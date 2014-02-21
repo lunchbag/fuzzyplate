@@ -9,15 +9,15 @@ css:
   # Footer
   footerColor: '#333'
   # Main body image
-  backgroundUrl: 'http://24.media.tumblr.com/0df0b55a4615378cf593241bad80a7da/tumblr_n0hpwpZrVc1st5lhmo1_1280.jpg'
+  backgroundUrl: 'http://31.media.tumblr.com/67d222ee577fc35faca83f0e08efc48e/tumblr_mzzqt7wyEU1st5lhmo1_1280.jpg'
   # Sections
   sectionBackgroundColorOdd: '#fff'
   sectionBackgroundColorEven: '#f3f3f3'
 
 # top-level stuff
-product_name: Kansas City Derp
-main_tagline: Some tagline about the product that will entice you to keep scrolling
-sub_tagline: Some more shit about our product like how we're revolutionizing this and that and whatever and now you want to learn more!
+product_name: My New Derpy Product Idea
+main_tagline: This is the main tagline about your product.
+sub_tagline: This is a sub tagline for more information about your product in order to entice your reader to keep scrolling!
 button_text: Learn more below!
 
 # footer stuff
@@ -28,11 +28,11 @@ sections:
   -
     n-columns: true
     title: About
+    nav_link: true
+    nav_link_id: about
     columns:
       -
         text: Lorem psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        nav_link: true
-        nav_link_id: about
 
   -
     n-columns: true
@@ -62,6 +62,7 @@ sections:
   -
     n-columns: true
     title: Testimonials
+    text: This is text to go with this section before the columns. You might want to use this section to give a high level explanation of what's to come.
     columns:
       -
         title: Random guy on HN
@@ -77,7 +78,7 @@ sections:
 
   -
     n-columns: true
-    title: Testimonials
+    title: More Testimonials
     columns:
       -
         image: andy.png
