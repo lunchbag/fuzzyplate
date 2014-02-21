@@ -1,6 +1,5 @@
 config.json
 public/*
-config.yml
 .DS_Store
 node_modules/
 views/vars.scss
