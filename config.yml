@@ -42,6 +42,7 @@ sections:
         title: Chief Shoe Officer
         image: team1.png
         resize: true
+        rounded_corner: true
         text: Lorem psum dolor sit amet
 
       -
