@@ -36,43 +36,16 @@
   {{#if n-columns}}
     <div class="section n-columns" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
       <span class="section-title">{{#if title}}{{title}}{{else}}n-Column Title{{/if}}</span>
-      {{#each columns}}
-      <span class="n-col">{{#if image}}{{#if image_link}}<a href="{{image_link}}">{{/if}}<img class="{{#if resize}}resize{{/if}} {{#if rounded_corner}}rounded-corner{{/if}}" src="{{image}}" />{{#if image_link}}</a>{{/if}}{{/if}}
-        <span class="col-title">{{#if title}}{{title}}{{/if}}</span>
-        <span class="col-text">{{#if text}}{{text}}{{/if}}</span>
-      </span>
-      {{/each}}
-    </div>
-  {{/if}}
-
-  {{#if 3-columns}}
-    <div class="section container col" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
-      <span class="section-title">{{#if title}}{{title}}{{else}}3-Column Title{{/if}}</span>
-      <div class="grid">
-        {{#each columns}}
-        <div class="unit one-of-three">
-          <span class="col-title">{{#if title}}{{title}}{{/if}}</span>
-          {{#if image}}<img src="{{image}}" />{{/if}}
-          {{#if quote}}<span class="col-text quote">{{quote}}</span>{{/if}}
-          {{#if text}}<span class="col-text">{{text}}</span>{{/if}}
+      <div class="n-col-table">
+        <div class="n-col-row">
+          {{#each columns}}
+          <span class="n-col">{{#if image}}{{#if image_link}}<a href="{{image_link}}">{{/if}}<img class="{{#if resize}}resize{{/if}} {{#if rounded_corner}}rounded-corner{{/if}}" src="{{image}}" />{{#if image_link}}</a>{{/if}}{{/if}}
+            <span class="col-title">{{#if title}}{{title}}{{/if}}</span>
+            {{#if text}}<span class="col-text">{{text}}</span>{{/if}}
+            {{#if quote}}<span class="col-text quote">{{quote}}</span>{{/if}}
+          </span>
+          {{/each}}
         </div>
-        {{/each}}
-      </div>
-    </div>
-  {{/if}}
-
-  {{#if 2-columns}}
-    <div class="section container col" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
-      <span class="section-title">{{#if title}}{{title}}{{else}}3-Column Title{{/if}}</span>
-      <div class="grid">
-        {{#each columns}}
-        <div class="unit one-of-two">
-          <span class="col-title">{{#if title}}{{title}}{{/if}}</span>
-          {{#if image}}<img src="{{image}}" />{{/if}}
-          {{#if quote}}<span class="col-text quote">{{quote}}</span>{{/if}}
-          {{#if text}}<span class="col-text">{{text}}</span>{{/if}}
-        </div>
-        {{/each}}
       </div>
     </div>
   {{/if}}

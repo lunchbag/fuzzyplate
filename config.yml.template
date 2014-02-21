@@ -56,36 +56,6 @@ sections:
         text: # optional
 
   -
-    3-columns: true
-    title:
-    columns:
-      -
-        title:
-        quote:
-        text: # only one of quote/text allowed
-
-      -
-        title:
-        quote:
-        text: # only one of quote/text allowed
-
-      -
-        title:
-        quote:
-        text: # only one of quote/text allowed
-
-  -
-    2-columns: true
-    title:
-    columns:
-      -
-        image:
-
-      -
-        title:
-        quote:
-
-  -
     n-columns: true
     title:
     columns:

@@ -43,22 +43,22 @@ sections:
         image: team1.png
         resize: true
         rounded_corner: true
-        text: Lorem psum dolor sit amet
+        text: Lorem psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
       -
         title: Resident Neckbeard
         image: team2.png
         resize: true
-        text: Lorem psum dolor sit amet
+        text: Lorem psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
       -
         title: Pantry Manager
         image: team3.png
         resize: true
-        text: Lorem psum dolor sit amet
+        text: Lorem psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
   -
-    3-columns: true
+    n-columns: true
     title: Testimonials
     columns:
       -
@@ -74,7 +74,7 @@ sections:
         quote: You want me to say something good about the product to put on your site?
 
   -
-    2-columns: true
+    n-columns: true
     title: Testimonials
     columns:
       -
