@@ -1,0 +1,114 @@
+# some stuff
+document_title: Derpy | made with Fuzzy Plates
+main_image:
+
+# css stuff
+css:
+  # Top header
+  headerColor: '#ffffff'
+  # Footer
+  footerColor: '#333'
+  # Main body image
+  backgroundUrl: 'http://24.media.tumblr.com/0df0b55a4615378cf593241bad80a7da/tumblr_n0hpwpZrVc1st5lhmo1_1280.jpg'
+  # Sections
+  sectionBackgroundColorOdd: '#fff'
+  sectionBackgroundColorEven: '#f3f3f3'
+
+# top-level stuff
+product_name: Kansas City Derp
+main_tagline: Some tagline about the product that will entice you to keep scrolling
+sub_tagline: Some more shit about our product like how we're revolutionizing this and that and whatever and now you want to learn more!
+button_text: Learn more below!
+
+# footer stuff
+footer_text: (c) Derpy Product, All Rights Reserved.
+twitter: lunchbag
+
+sections:
+  -
+    text-only: true
+    title: About
+    text: Lorem psum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    nav_link: true
+    nav_link_id: about
+
+  -
+    n-columns: true
+    title: Team
+    nav_link: true
+    nav_link_id: team
+    columns:
+      -
+        title: Chief Shoe Officer
+        image: team1.png
+        resize: true
+        text: Lorem psum dolor sit amet
+
+      -
+        title: Resident Neckbeard
+        image: team2.png
+        resize: true
+        text: Lorem psum dolor sit amet
+
+      -
+        title: Pantry Manager
+        image: team3.png
+        resize: true
+        text: Lorem psum dolor sit amet
+
+  -
+    3-columns: true
+    title: Testimonials
+    columns:
+      -
+        title: Random guy on HN
+        quote: This product is amazing! I use it everyday and it has changed my life.
+
+      -
+        title: Four-person start-up
+        quote: The resident neckbeard and his team are geniuses. Much wao.
+
+      -
+        title: Derpy pre-IPO company
+        quote: You want me to say something good about the product to put on your site?
+
+  -
+    2-columns: true
+    title: Testimonials
+    columns:
+      -
+        image: andy.png
+
+      -
+        title: Andy Jiang, Employee 2 at four-person start-up
+        quote: The resident neckbeard and his team are geniuses. Much wao.
+
+  -
+    n-columns: true
+    title: Featured On
+    columns:
+      -
+        image: techcrunch.png
+        image_link: 'http://techcrunch.com'
+        resize: false
+
+      -
+        image: pandodaily.png
+        image_link: 'http://pandodaily.com'
+        resize: false
+
+      -
+        image: huffingtonpost.png
+        image_link: 'http://huffingtonpost.com'
+        resize: false
+
+      -
+        image: thenextweb.png
+        image_link: 'http://thenextweb.com'
+        resize: false
+
+  -
+    subscribe: true
+    nav_link_id: signup
+    nav_link: true
+    title: Sign up!

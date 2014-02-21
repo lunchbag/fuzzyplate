@@ -19,7 +19,7 @@ hbs = exphbs.create({
 });
 
 // party like its ____
-app.listen(1820);
+app.listen(process.env.PORT || 1820);
 
 app.configure(function() {
   app.set('views', path.join(__dirname, 'views'));
