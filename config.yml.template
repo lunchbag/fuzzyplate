@@ -25,11 +25,13 @@ twitter:
 
 sections:
   -
-    text-only: true
-    title:
-    text:
-    nav_link: # true, or remove if false
-    nav_link_id: # some [a-z]+ id
+    n-columns: true
+    columns:
+      -
+        title:
+        text:
+        nav_link: # true, or remove if false
+        nav_link_id: # some [a-z]+ id
 
   -
     n-columns: true

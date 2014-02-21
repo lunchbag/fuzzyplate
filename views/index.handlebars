@@ -26,21 +26,14 @@
 </div>
 
 {{#each sections}}
-  {{#if text-only}}
-    <div class="section" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
-      <span class="section-title">{{#if title}}{{title}}{{else}}About{{/if}}</span>
-      <span class="section-text">{{text}}</span>
-    </div>
-  {{/if}}
-
   {{#if n-columns}}
     <div class="section n-columns" {{#if nav_link}}data-section-id="{{nav_link_id}}"{{/if}}>
-      <span class="section-title">{{#if title}}{{title}}{{else}}n-Column Title{{/if}}</span>
+      {{#if title}}<span class="section-title">{{title}}</span>{{/if}}
       <div class="n-col-table">
         <div class="n-col-row">
           {{#each columns}}
           <span class="n-col">{{#if image}}{{#if image_link}}<a href="{{image_link}}">{{/if}}<img class="{{#if resize}}resize{{/if}} {{#if rounded_corner}}rounded-corner{{/if}}" src="{{image}}" />{{#if image_link}}</a>{{/if}}{{/if}}
-            <span class="col-title">{{#if title}}{{title}}{{/if}}</span>
+            {{#if title}}<span class="col-title">{{title}}</span>{{/if}}
             {{#if text}}<span class="col-text">{{text}}</span>{{/if}}
             {{#if quote}}<span class="col-text quote">{{quote}}</span>{{/if}}
           </span>
